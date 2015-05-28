@@ -82,12 +82,6 @@ gem 'rails-flog'
 # Pagenation
 gem 'kaminari'
 
-# NewRelic
-gem 'newrelic_rpm'
-
-# Airbrake
-gem 'airbrake'
-
 # HTML Parser
 gem 'nokogiri'
 
@@ -96,9 +90,6 @@ gem 'hashie'
 
 # Settings
 gem 'settingslogic'
-
-# Cron Manage
-gem 'whenever', require: false
 
 # Presenter Layer Helper
 gem 'active_decorator'
@@ -135,22 +126,6 @@ group :development, :test do
 
   # テスト環境のテーブルをきれいにする
   gem 'database_rewinder'
-
-  # Time Mock
-  gem 'timecop'
-
-  # Deploy
-  gem 'capistrano', '~> 3.2.1'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano3-unicorn'
-end
-
-group :test do
-  # HTTP requests用のモックアップを作ってくれる
-  gem 'webmock'
-  gem 'vcr'
 end
 
 group :production, :staging do
