@@ -30,7 +30,7 @@ module BoardGameHistory
     # generatorの設定
     config.generators do |g|
       g.orm :active_record
-      g.template_engine :slim
+      g.template_engine :haml
       g.test_framework  :rspec, :fixture => true
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
       g.view_specs false
