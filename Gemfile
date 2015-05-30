@@ -61,8 +61,8 @@ gem 'less-rails'
 # App Server
 gem 'unicorn'
 
-# Slim
-gem 'slim-rails'
+# haml
+gem 'haml-rails'
 
 # Assets log cleaner
 gem 'quiet_assets'
@@ -88,15 +88,12 @@ gem 'nokogiri'
 # Hash extensions
 gem 'hashie'
 
-# Settings
-gem 'settingslogic'
-
 # Presenter Layer Helper
 gem 'active_decorator'
 
-group :development do
-  gem 'html2slim'
+gem 'minimum-omniauth-scaffold'
 
+group :development do
   # N+1問題の検出
   gem 'bullet'
 
