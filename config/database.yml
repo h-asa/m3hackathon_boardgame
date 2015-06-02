@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: board_game_history_development
   pool: 5
-  username: board_game_history
-  password:
+  username: postgres
+  password: aiopubap93a
   host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
