@@ -129,3 +129,8 @@ group :production, :staging do
   # ログ保存先変更、静的アセット Heroku 向けに調整
   gem 'rails_12factor'
 end
+
+# ActiveAdmin
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'devise'
