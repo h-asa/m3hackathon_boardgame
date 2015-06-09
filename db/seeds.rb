@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-game_msts = game_mst.create([
-    { name_japanese: 'カタンの開拓者たち' , name_english: 'Die Siedler von Catan' , author: 'クラウス・トイバー' , win_type: 'input_score' },
-    { name_japanese: 'カルカソンヌ' , name_english: 'Carcassonne' , author: 'ヴレーデ・クラウス・ユルゲン' , win_type: 'input_score' },
-    { name_japanese: 'パンデミック' , name_english: 'Pandemic' , author: 'マット・リーコック' , win_type: 'all_win_lose' }
-  ])
+GameMst.create([
+  { name_japanese: 'カタンの開拓者たち' , name_english: 'Die Siedler von Catan' , author: 'クラウス・トイバー' , win_type: 'input_score' },
+  { name_japanese: 'カルカソンヌ' , name_english: 'Carcassonne' , author: 'ヴレーデ・クラウス・ユルゲン' , win_type: 'input_score' },
+  { name_japanese: 'パンデミック' , name_english: 'Pandemic' , author: 'マット・リーコック' , win_type: 'all_win_lose' }
+])
