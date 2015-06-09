@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'top#index'
 
+  resources :users, except: [:index]
+
   # For OmniAuth
   get "/auth/:provider/callback" => "sessions#callback"
   get "/auth/failure"            => "sessions#failure"

@@ -6,8 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-GameMst.create([
-  { name_japanese: 'カタンの開拓者たち' , name_english: 'Die Siedler von Catan' , author: 'クラウス・トイバー' , win_type: 'input_score' },
-  { name_japanese: 'カルカソンヌ' , name_english: 'Carcassonne' , author: 'ヴレーデ・クラウス・ユルゲン' , win_type: 'input_score' },
-  { name_japanese: 'パンデミック' , name_english: 'Pandemic' , author: 'マット・リーコック' , win_type: 'all_win_lose' }
-])
+# ------------------------------------------------------------------
+# GameMst
+# ------------------------------------------------------------------
+[
+  { id: 1, name_japanese: 'カタンの開拓者たち', name_english: 'Die Siedler von Catan',  author: 'クラウス・トイバー',            win_type: 'input_score' },
+  { id: 2, name_japanese: 'カルカソンヌ',       name_english: 'Carcassonne',            author: 'ヴレーデ・クラウス・ユルゲン',  win_type: 'input_score' },
+  { id: 3, name_japanese: 'パンデミック',       name_english: 'Pandemic',               author: 'マット・リーコック',            win_type: 'all_win_lose' }
+].each do |game|
+  GameMst.where(id: game[:id]).first_or_initialize.update_attributes(game)
+end
+
